@@ -1,6 +1,7 @@
 function AddTodo(){
     return (
-        <div className="row">
+      <div className="container text-center">
+        <div className="row aqrow">
             <div className="col-4">
               <input type="text" placeholder="Enter Here !!!"></input>
             </div>
@@ -8,9 +9,10 @@ function AddTodo(){
               <input type="date"></input>
             </div>
             <div className="col-2">
-            <button type="button" className="btn btn-primary">ADD</button>
+            <button type="button" className="btn btn-primary aq-btn">ADD</button>
             </div>
           </div>
+      </div>
     )
     
 }
