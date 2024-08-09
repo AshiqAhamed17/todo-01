@@ -1,18 +1,12 @@
-h1 {
-    font-weight: 700;
-    font-size: 50px;
-    margin:15px;
-    margin-bottom: 30px;
-
+body {
+    background-color: #2C3E50;
+    color: #ECF0F1;
 }
 input{
     width: 50%;
 }
 
-.items{
-    text-align: left;
 
-}
 
 .aqrow{
     margin: 10px;

@@ -1,14 +1,14 @@
-function TodoItem1(){
-    let name  = 'Complete WEB 3.0 assign';
-    let date = '08/08/2024';
+//import TodoVal from "./TodoVal";
+function TodoItem({todoname, tododate}){
+
     return (
         <div className="container ">
         <div className="row aqrow">
             <div className="col-4">
-              {name}
+              {todoname}
             </div>
             <div className="col-4">
-              {date}
+              {tododate}
             </div>
             <div className="col-2">
             <button type="button" className="btn btn-danger aq-btn">Delete</button>
@@ -18,4 +18,4 @@ function TodoItem1(){
           
     )
 }
-export default TodoItem1;
+export default TodoItem;
