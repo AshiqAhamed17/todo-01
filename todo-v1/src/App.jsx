@@ -15,13 +15,18 @@ function App() {
     },
     {
     id:2,
-    name: 'Complete WEB 3.0 assign',
-    date: '08/08/2024',
+    name: 'Learn Web-3 week-2',
+    date: '15/08/2024',
     },
     {
       id:3,
       name: 'DO CP',
-      date: '12/08/2024',
+      date: '20/08/2024',
+    },
+    {
+      id:3,
+      name: 'JS Promises',
+      date: '13/08/2024',
     }
   
 ];
