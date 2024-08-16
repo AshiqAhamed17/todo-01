@@ -1,13 +1,14 @@
 
 import AppName from './components/AppName'
 import AddTodo from './components/Addtodo';
+import { useState } from'react';
 
 
 import "./App.css";
 import TodoVal from './components/TodoVal';
 function App() {
 
-  const todoVal = [
+  const initialTodo = [
     {
     id:1,
     name: 'Learn React ',
@@ -30,12 +31,22 @@ function App() {
     }
   
 ];
+
+const [todoItems, setTodoItems] = useState(initialTodo);
+
+const handleNewItem = (itemName, itemDate) => {
+  console.log(`new item added : ${itemName} Date: ${itemDate}`);
+  const newTodoitems = [...todoItems, {name: itemName, date: itemDate}];
+  setTodoItems(newTodoitems);
+}
+ 
+
   return (
     <>
       <center className="todo-container">
         <AppName />
-        <AddTodo />
-        <TodoVal TodoValue={todoVal}/>
+        <AddTodo  onNewItem={handleNewItem}/>
+        <TodoVal TodoValue={todoItems}/>
         </center>
 
         
