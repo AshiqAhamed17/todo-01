@@ -10,7 +10,7 @@ import WelcomeMsg from './components/WelcomeMsg';
 function App() {
 
   const initialTodo = [
-    {
+    /*{
     id:1,
     name: 'Learn React ',
     date: '20/08/2024',
@@ -29,7 +29,7 @@ function App() {
       id:3,
       name: 'JS Promises',
       date: '13/08/2024',
-    }
+    }*/
   
 ];
 
@@ -40,6 +40,10 @@ const handleNewItem = (itemName, itemDate) => {
   const newTodoitems = [...todoItems, {name: itemName, date: itemDate}];
   setTodoItems(newTodoitems);
 }
+const handleDeleteItem = (todoItemName ) => {
+  const newTodoItems = todoItems.filter((item) => item.name!== todoItemName);
+  setTodoItems(newTodoItems);
+}
  
 
   return (
@@ -47,8 +51,8 @@ const handleNewItem = (itemName, itemDate) => {
       <center className="todo-container">
         <AppName />
         <AddTodo  onNewItem={handleNewItem}/>
-        <WelcomeMsg/>
-        <TodoVal TodoValue={todoItems}/>
+        {todoItems.length === 0 && <WelcomeMsg />}
+        <TodoVal TodoValue={todoItems} onDeleteClick={handleDeleteItem}/>
         </center>
 
         

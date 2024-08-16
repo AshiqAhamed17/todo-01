@@ -1,5 +1,6 @@
 //import TodoVal from "./TodoVal";
-function TodoItem({todoname, tododate}){
+            
+function TodoItem({todoname, tododate,onDeleteClick }){
 
     return (
         <div className="container ">
@@ -11,11 +12,13 @@ function TodoItem({todoname, tododate}){
               {tododate}
             </div>
             <div className="col-2">
-            <button type="button" className="btn btn-danger aq-btn">Delete</button>
+            <button type="button" className="btn btn-danger aq-btn"
+            onClick={() => onDeleteClick(todoname)}
+            >Delete</button>
             </div>
           </div>
         </div>
           
-    )
+    ) 
 }
 export default TodoItem;

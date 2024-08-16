@@ -1,6 +1,6 @@
 import TodoItem from './TodoItem';
 import styles from './TodoVal.module.css'; 
-const TodoVal = ({TodoValue}) => {
+const TodoVal = ({TodoValue, onDeleteClick}) => {
 
     return (
         <>
@@ -9,7 +9,8 @@ const TodoVal = ({TodoValue}) => {
             <TodoItem 
             key={item.id} // Add a unique key prop
             todoname={item.name} 
-            tododate={item.date} 
+            tododate={item.date}
+            onDeleteClick={onDeleteClick}
   />
 ))}
          </div>
