@@ -11,7 +11,7 @@ function App() {
     {
     id:1,
     name: 'Learn React ',
-    date: '08/08/2024',
+    date: '20/08/2024',
     },
     {
     id:2,
