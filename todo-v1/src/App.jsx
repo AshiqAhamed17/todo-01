@@ -6,6 +6,7 @@ import { useState } from'react';
 
 import "./App.css";
 import TodoVal from './components/TodoVal';
+import WelcomeMsg from './components/WelcomeMsg';
 function App() {
 
   const initialTodo = [
@@ -46,6 +47,7 @@ const handleNewItem = (itemName, itemDate) => {
       <center className="todo-container">
         <AppName />
         <AddTodo  onNewItem={handleNewItem}/>
+        <WelcomeMsg/>
         <TodoVal TodoValue={todoItems}/>
         </center>
 
